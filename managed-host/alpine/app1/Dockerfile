@@ -1,6 +1,6 @@
 # https://github.com/panubo/docker-sshd
-FROM alpine:3.9 as alpine-systemd
-RUN apk --update --no-cache add openrc python && \
+FROM alpine:3 as alpine-systemd
+RUN apk --update --no-cache add openrc python3 && \
   ln -sf /sbin/openrc-init /sbin/init
 
 ENTRYPOINT ["/sbin/init"]

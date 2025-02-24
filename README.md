@@ -31,7 +31,7 @@ After this step, you will have an SSH key pair with one additional file (public 
 ## Define Managed Hosts
 This step will create three slightly modified Alpine Linux containers with SSH access. Note that after these containers start, there is no additional applications installed. For the Web application to be deployed, we will use Ansible to set it up. 
 
-Now, we would like to create three hosts as containers to be managed by Ansible. Under the root directory of the repo, create \texttt{docker-compose.yml} with the following content.
+Now, we would like to create three hosts as containers to be managed by Ansible. Under the root directory of the repo, create `docker-compose.yml` with the following content.
 
 ```yaml
 version: "3.7"
@@ -168,7 +168,7 @@ managedhost-app-2 | SUCCESS => {
 
 ## Playbook Sample
 
-The playbook sample is named \texttt{hello.yml}. It consists of 2 plays:
+The playbook sample is named `hello.yml`. It consists of 2 plays:
 
 - First play: target all managed hosts to create a simple file.
 - Second play: targets the alpine node to run NodeJS app (running inside the container on port 3000, running externally on port 3000-3002 - check docker-compose).
